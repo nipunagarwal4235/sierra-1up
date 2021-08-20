@@ -121,6 +121,17 @@ nav{
 .menu a.is-active , .menu a:hover{
   background-color: var(--primary);
 }
+
+/* Navbar Media Screen */
+@media (min-width: 768px) {
+  .hamburger{
+    display: none;
+  }
+  .menu{
+    display: block;
+  }
+}
+
 /* ======================== Home ==================== */
 .expanding
 {
@@ -366,6 +377,7 @@ nav{
 .games{
   display: flex;
 }
+
 .card {
   display: grid;
   grid-template-columns: 300px;
@@ -614,32 +626,25 @@ nav{
   color: #fff;
 }
 
-
-
-
 /* Social Media Icons CSS */
 .icons{
-  
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 40vh;
 }
-
 .icons ul{
   position: relative;
   display: flex;
   transform-style: preserve-3d;
   transform: rotate(-25deg) skew(25deg);
 }
-
 .icons ul li{
   position: relative;
   list-style: none;
   width: 60px;
   height: 60px;
   margin: 0 10px;
-  
 }
 .icons ul li:before{
   content: '';
@@ -664,22 +669,7 @@ nav{
   transform-origin: right;
   transform: skewY(-49deg);
 }
-/* .icons ul li.column {
-  float: left;
-  width: 20%;
-  padding: 5px;
-}
 
-.icons  ul.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-@media screen and (max-width: 820px) {
-  .contact .info-wrap .row .column {
-    width: 100%;
-  }
-} */
 .icons ul li span{
   position: absolute;
   top: 0;
@@ -742,14 +732,12 @@ nav{
 .icons ul li:nth-child(5):hover span{
   background: #25d366;
 }
-
-
-/* Navbar Media Screen */
-@media (min-width: 768px) {
-  .hamburger{
-    display: none;
-  }
-  .menu{
-    display: block;
-  }
+@media screen and (max-width: 420px) {
+.icons ul li{
+  width: 30px;
+  height: 30px;
+}
+.icons ul li span{
+  font-size: 18px !important;
+ }
 }
